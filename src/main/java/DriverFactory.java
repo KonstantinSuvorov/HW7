@@ -41,7 +41,7 @@ public class DriverFactory {
 
         driver = new AndroidDriver<>(remoteURL, capabilities);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-       // driver = EventFiringWebDriverFactory.getEventFiringWebDriver(driver, new EventListener());
+        driver = EventFiringWebDriverFactory.getEventFiringWebDriver(driver, new EventListener());
 
         return (AndroidDriver<?>) driver;
     }
